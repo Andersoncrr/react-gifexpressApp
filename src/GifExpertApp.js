@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
-import  logo  from './assets/img/logo.png';
-
 
 export const GifExpertApp = () => {
 
@@ -12,7 +10,7 @@ export const GifExpertApp = () => {
         <>
            
            <div className="title">
-                <img className="image" alt="gifs animados" src={ logo }/>
+                <img className="image" alt="gifs animados" src="https://c.tenor.com/ubd5D7SkT80AAAAd/gavurahmet-logo.gif"/>
                 <h2>GifExpress</h2>
                 
            </div>
