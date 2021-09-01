@@ -1,0 +1,36 @@
+import React, { useState } from 'react';
+import { AddCategory } from './components/AddCategory';
+import { GifGrid } from './components/GifGrid';
+import  logo  from './assets/img/logo.png';
+
+
+export const GifExpertApp = () => {
+
+    const [categories,setCategories] = useState(['One Punch']);
+
+    return (
+        <>
+           
+           <div className="title">
+                <img className="image" alt="gifs animados" src={ logo }/>
+                <h2>GifExpress</h2>
+                
+           </div>
+           <AddCategory setCategories={ setCategories }/>
+           <hr/>
+
+
+           <ol>
+               { 
+                    categories.map(category => (
+                        <GifGrid
+                            key= { category }
+                            category = { category }
+                         />
+                    ))
+                    
+               };
+           </ol>
+        </>
+    );  
+};
